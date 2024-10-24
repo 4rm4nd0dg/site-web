@@ -1,33 +1,22 @@
-/* Réinitialisation des styles par défaut */
-* {
+/* styles.css */
+
+body {
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #F8F4E3; /* Blanc Cassé */
+    color: #333;
 }
 
-/* Styles pour le corps du site */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333333;
-    line-height: 1.6;
-}
-
-/* Styles pour l'en-tête */
 header {
-    background-color: rgba(0, 0, 0, 0.7);
-    max-width: 1940px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    position: fixed;
-    width: 100%;
+    background-color: #A8D5BA; /* Vert Pâle */
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+    position: sticky;
     top: 0;
     z-index: 1000;
 }
-
 
 header h1 {
     margin: 0;
@@ -40,124 +29,198 @@ header p {
     font-style: italic;
 }
 
+nav {
+    background-color: #C1E1DC; /* Bleu Ciel */
+    text-align: center;
+    padding: 1em 0;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:whitesmoke;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.btn:hover{
+    background-color: #A8D5BA;
+}
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    gap: 20px;
+    justify-content: center;
 }
 
-nav a {
-    text-decoration: none;
-    color: #fff;
-    transition: all 0.2s ease;
-}
-
-nav a:hover {
-    color: orange;
-}
-
-/* Styles pour les menus déroulants */
-.dropdown {
+nav ul li {
+    margin: 0 1em;
     position: relative;
 }
 
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown styles */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #444;
-    min-width: 200px;
+    background-color: #C1E1DC; /* Bleu Ciel */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    top: 100%;
-}
-
-.dropdown-content li {
-    list-style: none;
+    min-width: 160px;
 }
 
 .dropdown-content a {
     color: white;
-    padding: 10px 20px;
+    padding: 12px 16px;
     text-decoration: none;
     display: block;
-    transition: background-color 0.3s;
+    text-align: left;
 }
 
 .dropdown-content a:hover {
-    background-color: #555;
+    background-color: #A8D5BA; /* Vert Pâle */
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Styles pour les sections */
-section {
-    padding: 40px;
-    background-color: #fff;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
-    top: 100px;
+main {
+    padding: 2em;
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.hero {
-    background: url('pexels-photo-5890296.jpeg') no-repeat center center/cover;
-    height: 100vh;
+section {
+    margin-bottom: 2em;
+}
+
+#hero {
+    position: relative;
+    text-align: center;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
-    text-align: center;
+    
+
 }
 
-section h2 {
-    font-size: 1.5rem;
-    color: #333333;
+#hero img {
+    width: 100%;
+    height: auto;
 }
 
-section p {
-    font-size: 1rem;
-    color: #666;
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    border-radius: 10px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: royalblue;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #333333;
-}
-
-/* Styles pour le pied de page */
 footer {
+    background-color: #A8D5BA; /* Vert Pâle */
+    color: white;
     text-align: center;
+    padding: 40px;
+}
+.footer-social{
+    margin-bottom: 1em;
+}
+.footer-social a{
+    display: inline-block;
+    margin: 0 0.5em;
+}
+.footer-social img{
+    width: 30px;
+    height: 30px;
+}
+.footer-links{
+    margin-bottom: 1em;
+}
+.footer-links a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 0.5em 0;
+}
+.footer-links a:hover{
+    text-decoration: underline;
+}
+.footer-copy{
+    margin-top: 1em;
+}
+
+.footer-copy p {
+    margin: 0.5em 0;
+}
+
+.course {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.course img {
+    width: 100%;
+    height: auto;
+}
+
+.course h3 {
+    margin: 0.5em 0;
+    color: #D4B483; /* Brun Clair */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label, form input, form textarea {
+    margin-bottom: 1em;
+}
+
+form input, form textarea {
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+form input[type="submit"] {
+    background-color: #C1E1DC; /* Bleu Ciel */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #A8D5BA; /* Vert Pâle */
+}
+.pricing{
+    background-color: #A8D5BA;
     padding: 20px;
-    background-color: #333;
-    color: #fff;
-    position: relative;
-    top: 100px;
 }
-
-footer a {
-    color: #fff;
-    text-decoration: none;
+.pricing table{
+    width: 100%;
+    border-collapse: collapse;
 }
-
-/* Styles pour les liens */
-a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: #0056b3;
+.pricing th .pricing td{
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #A8D5BA;
 }
